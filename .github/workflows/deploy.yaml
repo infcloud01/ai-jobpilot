@@ -38,8 +38,8 @@ jobs:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v6.1.0
       with:
-        role-to-assume: arn:aws:iam::123456789012:role/github-actions-ecr-role  # <-- Replace with your Role ARN
-        aws-region: us-east-1                                                  # <-- Replace with your AWS Region
+        role-to-assume: arn:aws:iam::271093731148:role/github-actions-ecr-role  # <-- Replace with your Role ARN
+        aws-region: us-west-1                                                  # <-- Replace with your AWS Region
 
     # 4. Log in into the private AWS Elastic Container Registry
     - name: Login to Amazon ECR
