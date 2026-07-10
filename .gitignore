@@ -1,0 +1,27 @@
+# ==========================================
+# AI-JobPilot Global Git Exclusion Matrix
+# ==========================================
+
+# 1. Python Virtual Environments (Ignore heavy local packages)
+.venv/
+venv/
+ENV/
+env/
+
+# 2. Sensitive Security Credentials & Environment Files (NEVER push these!)
+.env
+*.env
+backend/.env
+credentials.json
+token.json
+
+# 3. OS Specific Temporary Files
+.DS_Store
+Thumbs.db
+
+# 4. Python Cache Compilation Files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
