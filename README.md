@@ -64,9 +64,10 @@ backend/.env
 credentials.json
 token.json
 __pycache__/
+```
+
 2. Configure Backend Credentials
 Navigate to your backend/ directory, create a .env file, and plug in your live tokens:
-```
 
 ```Bash
 cd backend
@@ -93,16 +94,19 @@ source .venv/bin/activate  # Linux/Mac/WSL
 ```bash
 # Install package definitions
 pip install fastapi uvicorn requests python-multipart python-dotenv langgraph langchain-openai google-api-python-client google-auth-httplib2 google-auth-oauthlib
+```
 
 4. Configure Frontend Client ID
+
+```bash
 Open frontend/app.js and locate line 9 inside the window.onload block. Swap the placeholder string with your official Google Cloud Web Application Client ID:
 client_id: "YOUR_WEB_APPLICATION_CLIENT_ID.apps.googleusercontent.com",
 ```
 
-```bash
-5. Launch the Local Architecture Suite
-Boot the FastAPI Gateway Server (Port 8000):
 
+5. Launch the Local Architecture Suite
+```bash
+Boot the FastAPI Gateway Server (Port 8000):
 cd backend
 python3 -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 Boot the UI Display Web Server (Port 3000):
